@@ -124,9 +124,9 @@ def print_text_report(data, raw_input):
 
 def main():
     parser = argparse.ArgumentParser(description=DESC)
-    parser.add_argument("--prompt", help=PROMPT_HELP)
-    parser.add_argument("--file", help=FILE_HELP)
-    parser.add_argument("--json", action="store_true", help=JSON_HELP)
+    parser.add_argument("-prompt", "--prompt", help=PROMPT_HELP)
+    parser.add_argument("-file", "--file", help=FILE_HELP)
+    parser.add_argument("-json", "--json", action="store_true", help=JSON_HELP)
     args = parser.parse_args()
 
     input_text = ""
