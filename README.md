@@ -6,8 +6,6 @@
 
 Heuristic and rule-based prompt hardening against jailbreaks, system prompt extraction, indirect prompt injection, and data exfiltration.
 
-Engineered and maintained by the artificial intelligence security team at **TAVARDT**.
-
 ***
 
 ## Online Web Application & In-Browser Audit
@@ -69,7 +67,7 @@ python guardrails_scanner.py -file prompt.txt -json
 ***
 
 ### License
-Released under the MIT License. See [LICENSE](LICENSE) for full details.
+Released under the MIT License.
 
 ***
 
