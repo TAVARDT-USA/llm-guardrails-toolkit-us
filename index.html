@@ -558,6 +558,42 @@
     display: block;
   }
 
+
+    .faq-btn {
+      width: 100%;
+      background: transparent;
+      border: none;
+      padding: 16px 20px;
+      text-align: left;
+      font-size: 0.96rem;
+      font-weight: 600;
+      color: #f1f5f9;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      cursor: pointer;
+    }
+    .faq-btn:hover {
+      background: #0f172a;
+    }
+    .faq-icon {
+      font-size: 1.25rem;
+      color: #839bc8;
+      transition: transform 0.2s ease;
+    }
+    .faq-item.active .faq-icon {
+      transform: rotate(45deg);
+    }
+    .faq-body {
+      display: none;
+      padding: 0 20px 18px;
+      color: #94a3b8;
+      font-size: 0.92rem;
+      line-height: 1.6;
+    }
+    .faq-item.active .faq-body {
+      display: block;
+    }
 </style>
 <style id="tavardt-unified-enterprise-css">
 
@@ -1609,7 +1645,53 @@ footer > div:first-child {
 </section>
 <section class="faq-section">
 <h2 class="faq-title">Frequently Asked Questions on LLM Guardrails</h2>
-<div class="faq-list"><div class="faq-item"><div class="faq-question">What is an AI guardrails toolkit?<span class="faq-toggle">+</span></div><div class="faq-answer">It is a defensive software layer intercepting incoming prompts and generated completions to ensure LLMs adhere to security boundaries and organizational policies.</div></div><div class="faq-item"><div class="faq-question">What is the difference between input and output guardrails?<span class="faq-toggle">+</span></div><div class="faq-answer">Input guardrails prevent malicious payloads from reaching the model; output guardrails ensure generated responses contain no sensitive data or unauthorized code.</div></div><div class="faq-item"><div class="faq-question">How do guardrails prevent PII data leakage?<span class="faq-toggle">+</span></div><div class="faq-answer">By combining high-performance regex scanners with semantic entity recognition models that redact personal identifiers before data leaves the system.</div></div><div class="faq-item"><div class="faq-question">Are regex-based filters sufficient for LLM defense?<span class="faq-toggle">+</span></div><div class="faq-answer">No. Attackers use obfuscation, multilingual encoding, and prompt manipulation to bypass regexes. Hybrid semantic and lexical defenses are essential.</div></div><div class="faq-item"><div class="faq-question">How does TAVARDT implement ultra-low latency guardrails?<span class="faq-toggle">+</span></div><div class="faq-answer">TAVARDT deploys serverless guardrails on the Cloudflare global edge network, delivering comprehensive checks with sub-15ms latency overhead.</div></div></div>
+<div class="faq-list">
+<div class="faq-item">
+<button class="faq-btn" onclick="toggleFaq(this)" type="button">
+<span>What is an AI guardrails toolkit?</span>
+<span class="faq-icon">+</span>
+</button>
+<div class="faq-body">
+It is a defensive software layer intercepting incoming prompts and generated completions to ensure LLMs adhere to security boundaries and organizational policies.
+</div>
+</div>
+<div class="faq-item">
+<button class="faq-btn" onclick="toggleFaq(this)" type="button">
+<span>What is the difference between input and output guardrails?</span>
+<span class="faq-icon">+</span>
+</button>
+<div class="faq-body">
+Input guardrails prevent malicious payloads from reaching the model; output guardrails ensure generated responses contain no sensitive data or unauthorized code.
+</div>
+</div>
+<div class="faq-item">
+<button class="faq-btn" onclick="toggleFaq(this)" type="button">
+<span>How do guardrails prevent PII data leakage?</span>
+<span class="faq-icon">+</span>
+</button>
+<div class="faq-body">
+By combining high-performance regex scanners with semantic entity recognition models that redact personal identifiers before data leaves the system.
+</div>
+</div>
+<div class="faq-item">
+<button class="faq-btn" onclick="toggleFaq(this)" type="button">
+<span>Are regex-based filters sufficient for LLM defense?</span>
+<span class="faq-icon">+</span>
+</button>
+<div class="faq-body">
+No. Attackers use obfuscation, multilingual encoding, and prompt manipulation to bypass regexes. Hybrid semantic and lexical defenses are essential.
+</div>
+</div>
+<div class="faq-item">
+<button class="faq-btn" onclick="toggleFaq(this)" type="button">
+<span>How does TAVARDT implement ultra-low latency guardrails?</span>
+<span class="faq-icon">+</span>
+</button>
+<div class="faq-body">
+TAVARDT deploys serverless guardrails on the Cloudflare global edge network, delivering comprehensive checks with sub-15ms latency overhead.
+</div>
+</div>
+</div>
 </section>
 <div class="cta-card">
 <h3>Require Enterprise Guardrails for Production AI?</h3>
